@@ -54,17 +54,15 @@ div.dokuwiki li ol {
 
 div.dokuwiki a.urlextern,
 div.dokuwiki a.interwiki,
-div.dokuwiki a.mediafile,
 div.dokuwiki a.windows,
 div.dokuwiki a.mail {
+  /* should work but doesn't - so we just disable icons here*/
+  /*
   background-position: right 1px;
   padding-right: 16px;
-  padding-left: 0;
-  display: inline-block; /* needed for IE7 */
-}
-
-div.dokuwiki a.mediafile {
-  padding-right: 18px;
+  */
+  background-image: none !important;
+  padding: 0px 0px 0px 0px;
 }
 
 div.dokuwiki div.secedit input.button {
@@ -91,36 +89,30 @@ div.dokuwiki div.level4 { margin-left: 0px; margin-right: 63px; }
 div.dokuwiki div.level5 { margin-left: 0px; margin-right: 83px; }
 
 /* TOC control */
-div.dokuwiki #dw__toc {
+div.dokuwiki div.toc {
   float: left;
-  margin: 1.2em 2em 0 0;
 }
 
-div.dokuwiki #dw__toc h3 {
+div.dokuwiki div.tocheader {
   text-align: right;
 }
 
-div.dokuwiki .toggle strong {
-    float: left;
-    margin: 0.4em 0 0 3px;
-}
-
-div.dokuwiki #dw__toc > div {
+div.dokuwiki #toc__inside {
   text-align: right;
 }
 
-div.dokuwiki #dw__toc ul {
+div.dokuwiki ul.toc {
   padding: 0;
   padding-right: 1em;
 }
 
-div.dokuwiki #dw__toc ul li {
+div.dokuwiki ul.toc li {
   background-position: right 0.6em;
   padding-right: 0.4em;
   direction: rtl;
 }
 
-div.dokuwiki #dw__toc ul li.clear {
+div.dokuwiki ul.toc li.clear {
   padding-right: 0.4em;
 }
 

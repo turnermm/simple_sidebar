@@ -200,7 +200,7 @@ a.fn_bot {
   font-weight: bold;
 }
 
-abbr {
+acronym {
   border: 0;
 }
 
@@ -224,5 +224,6 @@ table.inline td {
   border: 1px solid #000000;
 }
 
-#dw__toc, .footerinc, .header, .bar, .user { display: none; }
+
+.toc, .footerinc, .header, .bar, .user, .left_sidebar { display: none; }
 

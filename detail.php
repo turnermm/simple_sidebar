@@ -4,6 +4,9 @@
  *
  * This is the template for displaying image details
  *
+ * You should leave the doctype at the very top - It should
+ * always be the very first line of a document.
+ *
  * @link   http://dokuwiki.org/templates
  * @author Andreas Gohr <andi@splitbrain.org>
  */

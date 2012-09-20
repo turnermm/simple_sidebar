@@ -265,6 +265,11 @@ div.dokuwiki a:active {
   text-decoration: underline;
 }
 
+div.dokuwiki h1 a,
+div.dokuwiki h2 a,
+div.dokuwiki h3 a,
+div.dokuwiki h4 a,
+div.dokuwiki h5 a,
 div.dokuwiki a.nolink {
   color: __text__ !important;
   text-decoration: none !important;
@@ -378,11 +383,11 @@ div.dokuwiki img.mediacenter {
 }
 
 /* smileys */
-div.dokuwiki img.icon {
+div.dokuwiki img.middle {
   vertical-align: middle;
 }
 
-div.dokuwiki abbr {
+div.dokuwiki acronym {
   cursor: help;
   border-bottom: 1px dotted __text__;
 }
@@ -547,7 +552,7 @@ div.dokuwiki table.inline td {
 
 /* ---------- table of contents ------------------- */
 
-div.dokuwiki #dw__toc {
+div.dokuwiki div.toc {
   margin: 1.2em 0 0 2em;
   float: right;
   width: 200px;
@@ -555,45 +560,46 @@ div.dokuwiki #dw__toc {
   clear: both;
 }
 
-div.dokuwiki #dw__toc h3 {
+div.dokuwiki div.tocheader {
   border: 1px solid __border__;
   background-color: __background_alt__;
   text-align: left;
   font-weight: bold;
   padding: 3px;
-  margin: 0 0 2px 0;
-  font-size: 1em;
+  margin-bottom: 2px;
 }
 
-div.dokuwiki .toggle strong {
+div.dokuwiki span.toc_open,
+div.dokuwiki span.toc_close {
     border: 0.4em solid __background_alt__;
     float: right;
     display: block;
     margin: 0.4em 3px 0 0;
 }
 
-div.dokuwiki .toggle span {
+div.dokuwiki span.toc_open span,
+div.dokuwiki span.toc_close span {
     display: none;
 }
 
-div.dokuwiki .toggle.closed strong {
+div.dokuwiki span.toc_open {
     margin-top: 0.4em;
     border-top: 0.4em solid __text__;
 }
 
-div.dokuwiki .toggle.open strong {
+div.dokuwiki span.toc_close {
     margin-top: 0;
     border-bottom: 0.4em solid __text__;
 }
 
-div.dokuwiki #dw__toc > div {
+div.dokuwiki #toc__inside {
   border: 1px solid __border__;
   background-color: __background__;
   text-align: left;
   padding: 0.5em 0 0.7em 0;
 }
 
-div.dokuwiki #dw__toc ul {
+div.dokuwiki ul.toc {
   list-style-type: none;
   list-style-image: none;
   line-height: 1.2em;
@@ -601,23 +607,23 @@ div.dokuwiki #dw__toc ul {
   margin: 0;
 }
 
-div.dokuwiki #dw__toc ul li {
+div.dokuwiki ul.toc li {
   background: transparent url(images/tocdot2.gif) 0 0.6em no-repeat;
   padding-left: 0.4em;
 }
 
-div.dokuwiki #dw__toc ul li.clear {
+div.dokuwiki ul.toc li.clear {
   background-image: none;
   padding-left: 0.4em;
 }
 
-div.dokuwiki #dw__toc a:link,
-div.dokuwiki #dw__toc a:visited {
+div.dokuwiki a.toc:link,
+div.dokuwiki a.toc:visited {
   color: __extern__;
 }
 
-div.dokuwiki #dw__toc a:hover,
-div.dokuwiki #dw__toc a:active {
+div.dokuwiki a.toc:hover,
+div.dokuwiki a.toc:active {
   color: __text__;
 }
 
@@ -706,20 +712,12 @@ div.insitu-footnote {
 }
 
 /* --------------- search result formating --------------- */
-#dw__loading {
-    text-align: center;
-    margin-bottom: 1em;
-}
-
-div.dokuwiki .search_results {
+div.dokuwiki .search_result {
+  margin-bottom: 6px;
   padding: 0 10px 0 30px;
 }
 
-div.dokuwiki .search_results dt {
-  margin-bottom: 3px;
-}
-div.dokuwiki .search_results dd {
-  margin-bottom: 6px;
+div.dokuwiki .search_snippet {
   color: __text_other__;
   font-size: 12px;
   margin-left: 20px;
