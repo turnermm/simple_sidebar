@@ -50,11 +50,17 @@ div.left_sidebar  {
     float:left;  padding:0.2em 0.5em 1em 2em;  display:block
    
     }
+div.left_sidebar.ssb_admin  {    
+    display:none;
+}
 div.right_page {
     float:right;  padding:0px; border-left:1px solid #ccc; width: __right_width__ ;
   
     }
+div.right_page.ssb_admin {
+      padding:0px; border-left:1px solid #ccc; width: 101%;  
 
+    }
 .menu_item { font-size: 9pt; font-weight: bold;}
 .menu_title { font-size: 10pt; font-weight: bold; 
               color: #436976;  background-color:#DEE7EC;
@@ -74,3 +80,5 @@ div.dokuwiki div.tags span {
   background: transparent url(images/tag.gif) 0px 1px no-repeat;
   padding: 1px 0px 1px 16px;
 }
+
+#bar__bottom.ssb_admin { margin-left: 0px;  width: 980px;}

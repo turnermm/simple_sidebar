@@ -34,6 +34,18 @@ if (!defined('DOKU_INC')) die();
     [<?php echo strip_tags($conf['title'])?>]
   </title>
 
+ <?php
+ global $INPUT;
+ $current_class = $INPUT->str('do');
+ if($current_class && $current_class == 'admin') {
+       echo  "<style type = 'text/css'>#toggler{ display: none; } </style>";
+       $current_class="ssb_admin";
+ }
+ else {
+     $current_class="ssb_std";
+ }
+ ?>
+
   <?php tpl_metaheaders()?>
 
   <link rel="shortcut icon" href="<?php echo DOKU_TPL?>images/favicon.ico" />
@@ -105,13 +117,13 @@ if (!defined('DOKU_INC')) die();
 <div id="toggler">
 <a href="javascript:sbar_toggler.toggle();void 0"><img src="<?php echo DOKU_TPL?>images/toggle.png" title="toggle" border="0" /></a>
 </div>
-<div class="left_sidebar"  id="left_sidebar">
+<div class="left_sidebar <?php echo $current_class;?>"  id="left_sidebar">
     
 <?php @include('sidebar.html');?>
 </div>  <!-- end left_sidebar-->
 
   <div class="page">
- <div class="right_page"  id="right_page">
+ <div class="right_page <?php echo $current_class;?>"  id="right_page">
 
     <!-- wikipage start -->
     <?php tpl_content()?>
@@ -124,7 +136,7 @@ if (!defined('DOKU_INC')) die();
 
   <?php flush()?>
 
- <div class="stylefoot" id="bottom_div">
+ <div class="stylefoot  <?php echo $current_class;?>" id="bottom_div">
 
       
       <div class="meta">
@@ -135,7 +147,7 @@ if (!defined('DOKU_INC')) die();
 
    <?php /*old includehook*/ @include(dirname(__FILE__).'/pagefooter.html')?>
    <br />
-    <div class="bar" id="bar__bottom">
+    <div class="bar  <?php echo $current_class;?>" id="bar__bottom">
       <div class="bar-left" id="bar__bottomleft">
         <?php tpl_button('edit')?>       
         <?php 
@@ -144,10 +156,6 @@ if (!defined('DOKU_INC')) die();
              tpl_button('media');
           }
         ?>
-       <?php tpl_button('revert')?>
-      </div>
-      <div class="bar-right" id="bar__bottomright">
-
         <?php tpl_button('subscribe')?>
         <?php tpl_button('admin')?>
         <?php tpl_button('profile')?>
