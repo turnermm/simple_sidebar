@@ -1,6 +1,6 @@
 <?php
 /**
- * DokuWiki Default Template
+	* DokuWiki Default Template
  *
  * This is the template you need to change for the overall look
  * of DokuWiki.
@@ -119,7 +119,25 @@ if (!defined('DOKU_INC')) die();
 </div>
 <div class="left_sidebar <?php echo $current_class;?>"  id="left_sidebar">
     
-<?php @include('sidebar.html');?>
+<?php 
+	$ssbar = dirname(__FILE__).'/sidebar.html';	
+	if(file_exists($ssbar)) {
+	@include($ssbar);
+	}
+	else {
+	  $ssbar = dirname(__FILE__).'/sidebar.php';
+	  if(file_exists($ssbar)) {
+	     @include($ssbar);
+	  }
+	 }
+?>
+<div id="personal_ssb">
+<?php
+ global $INFO;
+$pageid = "sidebar:" . $INFO['client'];
+tpl_include_page($pageid);
+?>
+</div>
 </div>  <!-- end left_sidebar-->
 
   <div class="page">
