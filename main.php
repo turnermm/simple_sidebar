@@ -35,9 +35,17 @@ if (!defined('DOKU_INC')) die();
   </title>
 
  <?php
+$bypass_sidebar = false;
+$pages =tpl_getConf('sbar_closed');
+if($pages) {
+    global $ID;
+    if(preg_match('/' . $ID .'/',$pages)) {
+       $bypass_sidebar=true;
+    }
+}
  global $INPUT;
  $current_class = $INPUT->str('do');
- if($current_class && $current_class == 'admin') {
+if(($current_class && $current_class == 'admin')  || $bypass_sidebar) {
        echo  "<style type = 'text/css'>#toggler{ display: none; } </style>";
        $current_class="ssb_admin";
  }
