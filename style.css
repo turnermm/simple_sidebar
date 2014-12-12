@@ -26,6 +26,8 @@ div#footer { clear: right;
              padding-top: .5em; padding-left: 12em;    }
 
 body {
+     /* uncomment following line to revert to smaller font size */
+     /*   font: 9pt bold Verdana,"Lucida Grande",Lucida,Helvetica,Arial,sans-serif;color:#333333;  */
          overflow: scroll;  
     }
 
