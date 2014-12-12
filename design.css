@@ -10,9 +10,10 @@
 * { padding: 0; margin: 0; }
 
 body {
-  font: 80% "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+  font: 87.5%/1.4 "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
   background-color: __background__;
   color: __text__;
+  -webkit-text-size-adjust: 100%;
 }
 
 /* the document */
