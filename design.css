@@ -218,7 +218,7 @@ div.bar button
   height: 1.6em;
 }
 
-div.dokuwiki div.secedit button,
+div.dokuwiki div.secedit button, form#dw__login button,
 div.dokuwiki div.secedit input.button {
   border: 1px solid __border__;
   color: __text__;
@@ -235,6 +235,12 @@ div.dokuwiki div.secedit input.button {
   height: 1.8em;
 }
 
+form#dw__login button {   
+  font-size: 10pt; 
+  height: 1.5em;
+  float: initial;
+
+}
 /* ----------- page navigator ------------- */
 
 div.dokuwiki div.pagenav {
