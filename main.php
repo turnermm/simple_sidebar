@@ -37,7 +37,12 @@ if (!defined('DOKU_INC')) die();
  <?php
 $bypass_sidebar = false;
 $pages =tpl_getConf('sbar_closed');
-if($pages) {
+$sidebar_off = tpl_getConf('sidebar_off');
+if($sidebar_off) {
+    $bypass_sidebar=true;
+    
+}
+else if($pages) {
     global $ID;
     if(preg_match('/' . $ID .'/',$pages)) {
        $bypass_sidebar=true;
@@ -66,7 +71,7 @@ if(($current_class && $current_class == 'admin')  || $bypass_sidebar) {
 
 <!--  TOP BAR -->
 
-<div id="top_bar" class="dokuwiki">
+<div id="top_bar" class="dokuwiki  <?php echo $current_class;?>">
 
   <?php html_msgarea()?>
 

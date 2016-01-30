@@ -81,7 +81,7 @@ div.dokuwiki div.tags span {
   background: transparent url(images/tag.gif) 0px 1px no-repeat;
   padding: 1px 0px 1px 16px;
 }
-
+div#top_bar.ssb_admin { padding-left: 0px; }
 #bar__bottom.ssb_admin { margin-left: 0px;  width: 980px;}
 
 #personal_ssb	{ overflow: auto;  width:  __personal_sbar__width; }
