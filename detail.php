@@ -10,7 +10,7 @@
 
 // must be run from within DokuWiki
 if (!defined('DOKU_INC')) die();
-
+if (!defined('DOKU_TPL')) define('DOKU_TPL',tpl_basedir());
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

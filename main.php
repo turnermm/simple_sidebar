@@ -14,7 +14,7 @@
 
 // must be run from within DokuWiki
 if (!defined('DOKU_INC')) die();
-
+if (!defined('DOKU_TPL')) define('DOKU_TPL',tpl_basedir());
 
     function _hide_email($email) {
           $encode = '';
